@@ -1,0 +1,5 @@
+[[ports]]
+name = "Nucleus Navigator"
+description = "The main port for Nucleus Navigator Web interface."
+default_value = 34_080
+value = 34_080

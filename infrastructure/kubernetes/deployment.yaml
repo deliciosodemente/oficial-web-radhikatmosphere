@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: omniverse-platform
+  namespace: ${KUBERNETES_NAMESPACE}
+  labels:
+    app: omniverse-platform
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: omniverse-platform
+  template:
+    metadata:
+      labels:
+        app: omniverse-platform
+    spec:
+      containers:
+      - name: backend
+        image: ${DOCKER_REGISTRY}/omniverse-platform:${VERSION}
+        resources:
+          limits:
+            nvidia.com/gpu: 1
+            memory: "8Gi"
+            cpu: "4"
+          requests:
+            memory: "4Gi"
+            cpu: "2"
+        ports:
+        - containerPort: 8000
+          name: http
+        env:
+        - name: NVIDIA_NGC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: nvidia-secrets
+              key: ngc-api-key
+        - name: UNITY_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: unity-secrets
+              key: api-key
+        - name: DAVINCI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: davinci-secrets
+              key: api-key
+        volumeMounts:
+        - name: models-storage
+          mountPath: /app/models
+        - name: config
+          mountPath: /app/config
+      volumes:
+      - name: models-storage
+        persistentVolumeClaim:
+          claimName: models-pvc
+      - name: config
+        configMap:
+          name: omniverse-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: omniverse-platform
+  namespace: ${KUBERNETES_NAMESPACE}
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8000
+    protocol: TCP
+    name: http
+  selector:
+    app: omniverse-platform
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: models-pvc
+  namespace: ${KUBERNETES_NAMESPACE}
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 100Gi
+  storageClassName: standard 

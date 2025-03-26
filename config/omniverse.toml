@@ -1,0 +1,10 @@
+bookmarks = { }
+
+[paths]
+confirmed = true
+data_root = "C:\\Users\\ben10\\AppData\\Local\\ov\\data"
+cache_root = "C:\\Users\\ben10\\AppData\\Local\\ov\\cache"
+library_root = "C:\\Users\\ben10\\AppData\\Local\\ov\\pkg"
+content_root = "C:\\Users\\ben10\\Downloads"
+extension_root = "C:\\Users\\ben10\\OneDrive\\Documentos\\kit\\shared\\exts"
+logs_root = "C:\\Users\\ben10\\.nvidia-omniverse\\logs"

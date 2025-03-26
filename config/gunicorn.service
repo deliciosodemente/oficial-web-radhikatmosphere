@@ -1,0 +1,15 @@
+[Unit]
+Description=gunicorn daemon for Radhika Atmosphere API
+After=network.target
+
+[Service]
+User=u547715306
+Group=u547715306
+WorkingDirectory=/public_html/api
+Environment="PATH=/public_html/api/venv/bin"
+ExecStart=/public_html/api/venv/bin/gunicorn \
+    --config /public_html/api/config/gunicorn.conf.py \
+    main:app
+
+[Install]
+WantedBy=multi-user.target 

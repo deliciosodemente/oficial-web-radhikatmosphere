@@ -1,0 +1,377 @@
+[2025-02-21 07:56:26.657] [info]  Omniverse Launcher 1.9.16 (production)
+[2025-02-21 07:56:26.822] [info]  Argv: C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\NVIDIA Omniverse Launcher.exe
+[2025-02-21 07:56:26.824] [info]  Crash dumps directory: C:\Users\ben10\AppData\Roaming\omniverse-launcher\Crashpad
+[2025-02-21 07:56:26.851] [info]  Start polling Launcher updates.
+[2025-02-21 07:56:27.736] [error] Failed to launch component on startup: Error: Can't launch nucleus-workstation -- F:\nucleus-workstation-2023.2.7\System Monitor\omni-system-monitor.exe is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async Is.launchComponentsOnStartup (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:207321)
+    at async Is.init (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:196856)
+    at async Object.initializeApps (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:263560)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:273925
+    at async App.<anonymous> (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:281629)
+[2025-02-21 07:56:27.762] [debug] Reset current installer.
+[2025-02-21 07:56:27.798] [info]  Running production web server.
+[2025-02-21 07:56:27.875] [info]  HTTP endpoints listening at http://localhost:33480
+[2025-02-21 07:56:27.877] [info]  HTTP endpoints listening at http://127.0.0.1:33480
+[2025-02-21 07:56:27.896] [debug] Sharing: false
+[2025-02-21 07:56:28.138] [info]  Started the Navigator web server on 127.0.0.1:34080.
+[2025-02-21 07:56:32.916] [info]  Registered omniverse-launcher for Windows.
+[2025-02-21 07:56:32.923] [info]  Registered omniverse for Windows.
+[2025-02-21 07:56:33.103] [info]  Initialized.
+[2025-02-21 07:56:33.404] [info]  Logged in.
+[2025-02-21 07:57:16.335] [info]  Opening a second instance...
+[2025-02-21 07:58:35.240] [debug] Waiting for authentication...
+[2025-02-21 07:58:35.242] [debug] Initializing reallusion-iclone-8-connector@8.50.0 installer...
+[2025-02-21 07:58:35.243] [info]  Fetching reallusion-iclone-8-connector information...
+[2025-02-21 07:58:35.437] [debug] Enqueue [b77837a4-5e90-46a9-9f9a-298e533c2158] reallusion-iclone-8-connector.
+[2025-02-21 07:58:35.438] [debug] Set current installer [b77837a4-5e90-46a9-9f9a-298e533c2158] reallusion-iclone-8-connector.
+[2025-02-21 07:58:35.491] [debug] [b77837a4-5e90-46a9-9f9a-298e533c2158] Preparing https://launcher-prod.s3.us-east-2.amazonaws.com/reallusion-iclone-8-connector/8.50.0/windows-x86_64/package.zip download to C:\Users\ben10\AppData\Local\ov\pkg\reallusion-iclone-8-connector-8.50.0\REALLUSION ICLONE 8.zip...
+[2025-02-21 07:58:35.492] [debug] [b77837a4-5e90-46a9-9f9a-298e533c2158] Preparing downloader for C:\Users\ben10\AppData\Local\ov\pkg\reallusion-iclone-8-connector-8.50.0\REALLUSION ICLONE 8.zip
+[2025-02-21 07:58:35.937] [info]  Signed url: https://asset.launcher.omniverse.nvidia.com/reallusion-iclone-8-connector/8.50.0/windows-x86_64/package.zip?Expires=1740189516&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9hc3NldC5sYXVuY2hlci5vbW5pdmVyc2UubnZpZGlhLmNvbS9yZWFsbHVzaW9uLWljbG9uZS04LWNvbm5lY3Rvci84LjUwLjAvd2luZG93cy14ODZfNjQvcGFja2FnZS56aXAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NDAxODk1MTZ9fX1dfQ__&Signature=ucAo94CI0ZQ8s~7J3PyNh3vdw4H5RRh-gTxja7YuY4hSX0DVV8PioLbS3gP3LSV0FW6eTAZ0T2~jWxvYwUzOIb8RUPDYF5kgTFmsyaSj25uTT9pQKvvv4QWk9-aZqk9N-dd73ZDv1LxmWvnTPCBtj2Q6GfYfkZm14WNfyxy55W93DbfQ053Ar76szaIWtnrHIAh3oxqxBffFMCXDk4KKFbcsVj-u8r6vO0oIQUXLVLS6K-6j5SaS3qP61ZTFwxPP3l0F8hmiPtqY9-haanSvTW9fuURU9Pspwfeb~FMFoow4wmZUgnC03vz1LmDu1p5hG1e1OR3bdpJwy-dfFxoQwQ__&Key-Pair-Id=K13PD0MHC2KFRP
+[2025-02-21 07:58:35.938] [info]  [b77837a4-5e90-46a9-9f9a-298e533c2158] Calculating package size for https://asset.launcher.omniverse.nvidia.com/reallusion-iclone-8-connector/8.50.0/windows-x86_64/package.zip?Expires=1740189516&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9hc3NldC5sYXVuY2hlci5vbW5pdmVyc2UubnZpZGlhLmNvbS9yZWFsbHVzaW9uLWljbG9uZS04LWNvbm5lY3Rvci84LjUwLjAvd2luZG93cy14ODZfNjQvcGFja2FnZS56aXAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NDAxODk1MTZ9fX1dfQ__&Signature=ucAo94CI0ZQ8s~7J3PyNh3vdw4H5RRh-gTxja7YuY4hSX0DVV8PioLbS3gP3LSV0FW6eTAZ0T2~jWxvYwUzOIb8RUPDYF5kgTFmsyaSj25uTT9pQKvvv4QWk9-aZqk9N-dd73ZDv1LxmWvnTPCBtj2Q6GfYfkZm14WNfyxy55W93DbfQ053Ar76szaIWtnrHIAh3oxqxBffFMCXDk4KKFbcsVj-u8r6vO0oIQUXLVLS6K-6j5SaS3qP61ZTFwxPP3l0F8hmiPtqY9-haanSvTW9fuURU9Pspwfeb~FMFoow4wmZUgnC03vz1LmDu1p5hG1e1OR3bdpJwy-dfFxoQwQ__&Key-Pair-Id=K13PD0MHC2KFRP...
+[2025-02-21 07:58:36.368] [debug] [b77837a4-5e90-46a9-9f9a-298e533c2158] reallusion-iclone-8-connector@8.50.0: 
+[2025-02-21 07:58:36.368] [debug]   Downloaded: 0
+[2025-02-21 07:58:36.369] [debug]   Total: 25623171
+[2025-02-21 07:58:36.370] [debug] [b77837a4-5e90-46a9-9f9a-298e533c2158] Start reallusion-iclone-8-connector@8.50.0 download
+[2025-02-21 07:58:36.372] [debug] [b77837a4-5e90-46a9-9f9a-298e533c2158] Downloading https://asset.launcher.omniverse.nvidia.com/reallusion-iclone-8-connector/8.50.0/windows-x86_64/package.zip?Expires=1740189516&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9hc3NldC5sYXVuY2hlci5vbW5pdmVyc2UubnZpZGlhLmNvbS9yZWFsbHVzaW9uLWljbG9uZS04LWNvbm5lY3Rvci84LjUwLjAvd2luZG93cy14ODZfNjQvcGFja2FnZS56aXAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NDAxODk1MTZ9fX1dfQ__&Signature=ucAo94CI0ZQ8s~7J3PyNh3vdw4H5RRh-gTxja7YuY4hSX0DVV8PioLbS3gP3LSV0FW6eTAZ0T2~jWxvYwUzOIb8RUPDYF5kgTFmsyaSj25uTT9pQKvvv4QWk9-aZqk9N-dd73ZDv1LxmWvnTPCBtj2Q6GfYfkZm14WNfyxy55W93DbfQ053Ar76szaIWtnrHIAh3oxqxBffFMCXDk4KKFbcsVj-u8r6vO0oIQUXLVLS6K-6j5SaS3qP61ZTFwxPP3l0F8hmiPtqY9-haanSvTW9fuURU9Pspwfeb~FMFoow4wmZUgnC03vz1LmDu1p5hG1e1OR3bdpJwy-dfFxoQwQ__&Key-Pair-Id=K13PD0MHC2KFRP...
+[2025-02-21 07:58:36.550] [debug] [b77837a4-5e90-46a9-9f9a-298e533c2158] Save https://asset.launcher.omniverse.nvidia.com/reallusion-iclone-8-connector/8.50.0/windows-x86_64/package.zip?Expires=1740189516&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9hc3NldC5sYXVuY2hlci5vbW5pdmVyc2UubnZpZGlhLmNvbS9yZWFsbHVzaW9uLWljbG9uZS04LWNvbm5lY3Rvci84LjUwLjAvd2luZG93cy14ODZfNjQvcGFja2FnZS56aXAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NDAxODk1MTZ9fX1dfQ__&Signature=ucAo94CI0ZQ8s~7J3PyNh3vdw4H5RRh-gTxja7YuY4hSX0DVV8PioLbS3gP3LSV0FW6eTAZ0T2~jWxvYwUzOIb8RUPDYF5kgTFmsyaSj25uTT9pQKvvv4QWk9-aZqk9N-dd73ZDv1LxmWvnTPCBtj2Q6GfYfkZm14WNfyxy55W93DbfQ053Ar76szaIWtnrHIAh3oxqxBffFMCXDk4KKFbcsVj-u8r6vO0oIQUXLVLS6K-6j5SaS3qP61ZTFwxPP3l0F8hmiPtqY9-haanSvTW9fuURU9Pspwfeb~FMFoow4wmZUgnC03vz1LmDu1p5hG1e1OR3bdpJwy-dfFxoQwQ__&Key-Pair-Id=K13PD0MHC2KFRP to C:\Users\ben10\AppData\Local\ov\pkg\reallusion-iclone-8-connector-8.50.0\REALLUSION ICLONE 8.zip
+[2025-02-21 07:58:41.745] [debug] [b77837a4-5e90-46a9-9f9a-298e533c2158] Extracting reallusion-iclone-8-connector@8.50.0 to C:\Users\ben10\AppData\Local\ov\pkg\reallusion-iclone-8-connector-8.50.0...
+[2025-02-21 07:58:41.794] [error] (node:16648) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `NVIDIA Omniverse Launcher --trace-deprecation ...` to show where the warning was created)
+[2025-02-21 07:58:51.900] [debug] [b77837a4-5e90-46a9-9f9a-298e533c2158] Load installation scripts from C:\Users\ben10\AppData\Local\ov\pkg\reallusion-iclone-8-connector-8.50.0
+[2025-02-21 07:58:52.173] [debug] [b77837a4-5e90-46a9-9f9a-298e533c2158] Deleting C:\Users\ben10\AppData\Local\ov\pkg\reallusion-iclone-8-connector-8.50.0\REALLUSION ICLONE 8.zip artifact...
+[2025-02-21 07:58:53.531] [debug] [b77837a4-5e90-46a9-9f9a-298e533c2158] Finishing the reallusion-iclone-8-connector@8.50.0 installation...
+[2025-02-21 07:58:53.538] [info]  Registering reallusion-iclone-8-connector@8.50.0...
+[2025-02-21 07:58:53.540] [debug] Running "C:\Users\ben10\AppData\Local\ov\pkg\reallusion-iclone-8-connector-8.50.0\InstallCcConnectorExe\InstallCcConnector.exe" -ic
+[2025-02-21 07:59:18.751] [error] Error: Can't launch kit_remote -- F:\kit_remote-103.1.1\kit-remote.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 07:59:18.757] [error] Error occurred in handler for 'launch-component': Error: Can't launch kit_remote -- F:\kit_remote-103.1.1\kit-remote.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 07:59:49.701] [error] Error: Can't launch canvas -- F:\canvas-1.4.311\omni.canvas.launcher.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 07:59:49.702] [error] Error occurred in handler for 'launch-component': Error: Can't launch canvas -- F:\canvas-1.4.311\omni.canvas.launcher.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 07:59:55.964] [debug] Dequeue [b77837a4-5e90-46a9-9f9a-298e533c2158] reallusion-iclone-8-connector.
+[2025-02-21 07:59:55.965] [debug] Reset current installer.
+[2025-02-21 07:59:55.966] [debug] [b77837a4-5e90-46a9-9f9a-298e533c2158] Removing the artifact path C:\Users\ben10\AppData\Local\ov\pkg\reallusion-iclone-8-connector-8.50.0\REALLUSION ICLONE 8.zip due to an error.
+[2025-02-21 07:59:55.968] [debug] [b77837a4-5e90-46a9-9f9a-298e533c2158] Failed to remove the artifact path C:\Users\ben10\AppData\Local\ov\pkg\reallusion-iclone-8-connector-8.50.0\REALLUSION ICLONE 8.zip:  Error: ENOENT: no such file or directory, unlink 'C:\Users\ben10\AppData\Local\ov\pkg\reallusion-iclone-8-connector-8.50.0\REALLUSION ICLONE 8.zip'
+    at async Object.unlink (node:internal/fs/promises:1066:10)
+    at async ls.onInstallationFailure (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:162036)
+    at async ls.run (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:159538)
+[2025-02-21 07:59:55.968] [debug] [b77837a4-5e90-46a9-9f9a-298e533c2158] Removing the installation path C:\Users\ben10\AppData\Local\ov\pkg\reallusion-iclone-8-connector-8.50.0 due to an error.
+[2025-02-21 08:00:01.075] [error] Error
+    at ChildProcess.<anonymous> (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:144831)
+    at Object.onceWrapper (node:events:634:26)
+    at ChildProcess.emit (node:events:519:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+[2025-02-21 08:04:04.473] [error] Error: Can't launch navigator -- F:\navigator-3.4.0\Navigator\omniverse-navigator-win.exe is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 08:04:04.476] [error] Error occurred in handler for 'launch-component': Error: Can't launch navigator -- F:\navigator-3.4.0\Navigator\omniverse-navigator-win.exe is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 08:04:11.918] [error] Error: Can't launch wrapp -- F:\wrapp-1.1.2\launch_wrapp_cli.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 08:04:11.919] [error] Error occurred in handler for 'launch-component': Error: Can't launch wrapp -- F:\wrapp-1.1.2\launch_wrapp_cli.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:32:25.318] [info]  Omniverse Launcher 1.9.16 (production)
+[2025-02-21 16:32:25.359] [info]  Argv: C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\NVIDIA Omniverse Launcher.exe --hidden
+[2025-02-21 16:32:25.360] [info]  Crash dumps directory: C:\Users\ben10\AppData\Roaming\omniverse-launcher\Crashpad
+[2025-02-21 16:32:25.370] [info]  Start polling Launcher updates.
+[2025-02-21 16:32:26.195] [error] Failed to launch component on startup: Error: Can't launch nucleus-workstation -- F:\nucleus-workstation-2023.2.7\System Monitor\omni-system-monitor.exe is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async Is.launchComponentsOnStartup (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:207321)
+    at async Is.init (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:196856)
+    at async Object.initializeApps (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:263560)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:273925
+    at async App.<anonymous> (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:281629)
+[2025-02-21 16:32:26.222] [debug] Reset current installer.
+[2025-02-21 16:32:26.252] [info]  Running production web server.
+[2025-02-21 16:32:26.333] [info]  HTTP endpoints listening at http://localhost:33480
+[2025-02-21 16:32:26.334] [info]  HTTP endpoints listening at http://127.0.0.1:33480
+[2025-02-21 16:32:26.362] [debug] Sharing: false
+[2025-02-21 16:32:26.565] [info]  Started the Navigator web server on 127.0.0.1:34080.
+[2025-02-21 16:32:31.354] [info]  Registered omniverse-launcher for Windows.
+[2025-02-21 16:32:31.356] [info]  Registered omniverse for Windows.
+[2025-02-21 16:32:31.475] [info]  Initialized.
+[2025-02-21 16:32:31.902] [error] Bearer realm="login.nvidia.com",error="invalid_token",error_description="Token not found"
+[2025-02-21 16:32:35.019] [error] Bearer realm="login.nvidia.com",error="invalid_token",error_description="Token not found"
+[2025-02-21 16:32:38.115] [error] Bearer realm="login.nvidia.com",error="invalid_token",error_description="Token not found"
+[2025-02-21 16:32:41.358] [error] Bearer realm="login.nvidia.com",error="invalid_token",error_description="Token not found"
+[2025-02-21 16:32:44.474] [error] Bearer realm="login.nvidia.com",error="invalid_token",error_description="Token not found"
+[2025-02-21 16:32:44.614] [error] Got an error during the token refresh: Error: Unexpected error happened during the authentication. Please try to log out from the launcher and authenticate again. ([invalid_token] -- Token not found)
+    at async i (file:///C:/Users/ben10/AppData/Local/Programs/omniverse-launcher/resources/app.asar/dist/renderer/js/main.6adca8ad8ac19e368917.js:287:261597)
+    at async v.refresh (file:///C:/Users/ben10/AppData/Local/Programs/omniverse-launcher/resources/app.asar/dist/renderer/js/main.6adca8ad8ac19e368917.js:287:103146)
+    at async v.getUserInfo (file:///C:/Users/ben10/AppData/Local/Programs/omniverse-launcher/resources/app.asar/dist/renderer/js/main.6adca8ad8ac19e368917.js:287:107559)
+    at async v.startInitializing (file:///C:/Users/ben10/AppData/Local/Programs/omniverse-launcher/resources/app.asar/dist/renderer/js/main.6adca8ad8ac19e368917.js:287:105140)
+[2025-02-21 16:32:44.619] [warn]  Failed to get user info: Error: Unexpected error happened during the authentication. Please try to log out from the launcher and authenticate again. ([invalid_token] -- Token not found)
+[2025-02-21 16:33:47.368] [info]  Login URL opened.
+[2025-02-21 16:33:47.477] [info]  Waiting for login result...
+[2025-02-21 16:34:08.228] [info]  WEB /desktop/login-result?state=eyJlbGVjdHJvbiI6dHJ1ZX0%3D&ui_locales=es&code=R4PH3TSR6qEbYXjGHLWsAtj57tQfi0EUbyp0CLQrLmxvXdibk_GD3wkMZJqGfic-OLrZhhXqWG4ubpZFjOa2RA
+[2025-02-21 16:34:13.130] [info]  WEB /favicon.ico
+[2025-02-21 16:34:19.184] [info]  Opening a second instance...
+[2025-02-21 16:34:19.186] [info]  Found /login command...
+[2025-02-21 16:34:19.315] [info]  Run omniverse-launcher://login/?state=eyJlbGVjdHJvbiI6dHJ1ZX0%3D&ui_locales=es&code=R4PH3TSR6qEbYXjGHLWsAtj57tQfi0EUbyp0CLQrLmxvXdibk_GD3wkMZJqGfic-OLrZhhXqWG4ubpZFjOa2RA command...
+[2025-02-21 16:34:19.319] [info]  Received login result.
+[2025-02-21 16:34:20.483] [info]  Logged in.
+[2025-02-21 16:36:09.043] [error] Error: Can't launch kit_remote -- F:\kit_remote-103.1.1\kit-remote.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:36:09.045] [error] Error occurred in handler for 'launch-component': Error: Can't launch kit_remote -- F:\kit_remote-103.1.1\kit-remote.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:36:16.932] [error] Error: Can't launch kit_remote -- F:\kit_remote-103.1.1\kit-remote.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:36:16.933] [error] Error occurred in handler for 'launch-component': Error: Can't launch kit_remote -- F:\kit_remote-103.1.1\kit-remote.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:38:33.441] [error] Error: Can't launch kit_remote -- F:\kit_remote-103.1.1\kit-remote.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:38:33.442] [error] Error occurred in handler for 'launch-component': Error: Can't launch kit_remote -- F:\kit_remote-103.1.1\kit-remote.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:38:41.385] [error] Error: Can't launch kit_remote -- F:\kit_remote-103.1.1\kit-remote.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:38:41.386] [error] Error occurred in handler for 'launch-component': Error: Can't launch kit_remote -- F:\kit_remote-103.1.1\kit-remote.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:38:56.523] [error] Error: Can't launch nucleus-workstation -- F:\nucleus-workstation-2023.2.7\System Monitor\omni-system-monitor.exe is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:38:56.524] [error] Error occurred in handler for 'launch-component': Error: Can't launch nucleus-workstation -- F:\nucleus-workstation-2023.2.7\System Monitor\omni-system-monitor.exe is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:39:12.335] [error] Error: Can't launch wrapp -- F:\wrapp-1.1.2\launch_wrapp_cli.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:39:12.336] [error] Error occurred in handler for 'launch-component': Error: Can't launch wrapp -- F:\wrapp-1.1.2\launch_wrapp_cli.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:41:26.974] [error] Error: Can't launch kit_remote -- F:\kit_remote-103.1.1\kit-remote.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:41:26.975] [error] Error occurred in handler for 'launch-component': Error: Can't launch kit_remote -- F:\kit_remote-103.1.1\kit-remote.bat is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:42:50.775] [error] Error: Can't launch navigator -- F:\navigator-3.4.0\Navigator\omniverse-navigator-win.exe is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 16:42:50.777] [error] Error occurred in handler for 'launch-component': Error: Can't launch navigator -- F:\navigator-3.4.0\Navigator\omniverse-navigator-win.exe is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:37809
+    at async WebContents.<anonymous> (node:electron/js2c/browser_init:2:86542)
+[2025-02-21 17:04:44.676] [info]  Cannot resolve the hostname, proceed with ch https:...
+[2025-02-21 17:04:44.688] [info]  Error: Failed to construct 'URL': Invalid URL
+    at async onSubmit (file:///C:/Users/ben10/AppData/Local/Programs/omniverse-launcher/resources/app.asar/dist/renderer/js/nucleus-page.6adca8ad8ac19e368917.js:1:520755)
+    at async file:///C:/Users/ben10/AppData/Local/Programs/omniverse-launcher/resources/app.asar/dist/renderer/js/nucleus-page.6adca8ad8ac19e368917.js:1:64261
+[2025-02-21 19:46:25.936] [error] Error happened during the update:  Error: net::ERR_SOCKET_NOT_CONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-02-21 19:58:59.981] [error] Error happened during the update:  Error: net::ERR_SOCKET_NOT_CONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-02-21 20:02:07.297] [error] Error happened during the update:  Error: net::ERR_SOCKET_NOT_CONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-02-22 01:40:31.207] [error] Error happened during the update:  Error: net::ERR_SOCKET_NOT_CONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-02-22 04:46:33.022] [info]  Omniverse Launcher 1.9.16 (production)
+[2025-02-22 04:46:33.082] [info]  Argv: C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\NVIDIA Omniverse Launcher.exe --hidden
+[2025-02-22 04:46:33.084] [info]  Crash dumps directory: C:\Users\ben10\AppData\Roaming\omniverse-launcher\Crashpad
+[2025-02-22 04:46:33.121] [info]  Start polling Launcher updates.
+[2025-02-22 04:46:34.373] [error] Failed to launch component on startup: Error: Can't launch nucleus-workstation -- F:\nucleus-workstation-2023.2.7\System Monitor\omni-system-monitor.exe is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async Is.launchComponentsOnStartup (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:207321)
+    at async Is.init (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:196856)
+    at async Object.initializeApps (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:263560)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:273925
+    at async App.<anonymous> (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:281629)
+[2025-02-22 04:46:34.387] [debug] Reset current installer.
+[2025-02-22 04:46:34.430] [info]  Running production web server.
+[2025-02-22 04:46:34.536] [info]  HTTP endpoints listening at http://localhost:33480
+[2025-02-22 04:46:34.537] [info]  HTTP endpoints listening at http://127.0.0.1:33480
+[2025-02-22 04:46:34.564] [debug] Sharing: false
+[2025-02-22 04:46:35.106] [info]  Started the Navigator web server on 127.0.0.1:34080.
+[2025-02-22 04:46:42.165] [info]  Registered omniverse-launcher for Windows.
+[2025-02-22 04:46:42.168] [info]  Registered omniverse for Windows.
+[2025-02-22 04:46:42.431] [info]  Initialized.
+[2025-02-22 04:46:43.003] [info]  Logged in.
+[2025-02-22 10:37:25.878] [info]  Omniverse Launcher 1.9.16 (production)
+[2025-02-22 10:37:26.607] [info]  Argv: C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\NVIDIA Omniverse Launcher.exe --hidden
+[2025-02-22 10:37:26.609] [info]  Crash dumps directory: C:\Users\ben10\AppData\Roaming\omniverse-launcher\Crashpad
+[2025-02-22 10:37:26.637] [info]  Start polling Launcher updates.
+[2025-02-22 10:37:27.851] [error] Failed to launch component on startup: Error: Can't launch nucleus-workstation -- F:\nucleus-workstation-2023.2.7\System Monitor\omni-system-monitor.exe is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async Is.launchComponentsOnStartup (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:207321)
+    at async Is.init (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:196856)
+    at async Object.initializeApps (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:263560)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:273925
+    at async App.<anonymous> (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:281629)
+[2025-02-22 10:37:27.883] [debug] Reset current installer.
+[2025-02-22 10:37:28.052] [info]  Running production web server.
+[2025-02-22 10:37:28.159] [info]  HTTP endpoints listening at http://localhost:33480
+[2025-02-22 10:37:28.161] [info]  HTTP endpoints listening at http://127.0.0.1:33480
+[2025-02-22 10:37:28.229] [debug] Sharing: false
+[2025-02-22 10:37:28.524] [info]  Started the Navigator web server on 127.0.0.1:34080.
+[2025-02-22 10:37:54.190] [info]  Registered omniverse-launcher for Windows.
+[2025-02-22 10:37:54.193] [info]  Registered omniverse for Windows.
+[2025-02-22 10:37:54.398] [info]  Initialized.
+[2025-02-22 10:37:54.863] [info]  Logged in.
+[2025-02-22 13:01:02.349] [info]  Omniverse Launcher 1.9.16 (production)
+[2025-02-22 13:01:02.406] [info]  Argv: C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\NVIDIA Omniverse Launcher.exe --hidden
+[2025-02-22 13:01:02.408] [info]  Crash dumps directory: C:\Users\ben10\AppData\Roaming\omniverse-launcher\Crashpad
+[2025-02-22 13:01:02.422] [info]  Start polling Launcher updates.
+[2025-02-22 13:01:04.077] [error] Failed to launch component on startup: Error: Can't launch nucleus-workstation -- F:\nucleus-workstation-2023.2.7\System Monitor\omni-system-monitor.exe is not found.
+    at Is.launch (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:201850)
+    at async Is.launchComponentsOnStartup (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:207321)
+    at async Is.init (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:196856)
+    at async Object.initializeApps (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:263560)
+    at async C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:273925
+    at async App.<anonymous> (C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\resources\app.asar\dist\main.js:425:281629)
+[2025-02-22 13:01:04.131] [debug] Reset current installer.
+[2025-02-22 13:01:04.713] [info]  Running production web server.
+[2025-02-22 13:01:04.807] [info]  HTTP endpoints listening at http://localhost:33480
+[2025-02-22 13:01:04.809] [info]  HTTP endpoints listening at http://127.0.0.1:33480
+[2025-02-22 13:01:04.902] [debug] Sharing: false
+[2025-02-22 13:01:05.269] [info]  Started the Navigator web server on 127.0.0.1:34080.
+[2025-02-22 13:01:13.587] [info]  Registered omniverse-launcher for Windows.
+[2025-02-22 13:01:13.589] [info]  Registered omniverse for Windows.
+[2025-02-22 13:01:13.864] [info]  Initialized.
+[2025-02-22 13:01:15.364] [info]  Logged in.
+[2025-03-15 06:34:23.371] [info]  Omniverse Launcher 1.9.16 (production)
+[2025-03-15 06:34:23.446] [info]  Argv: C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\NVIDIA Omniverse Launcher.exe
+[2025-03-15 06:34:23.448] [info]  Crash dumps directory: C:\Users\ben10\AppData\Roaming\omniverse-launcher\Crashpad
+[2025-03-15 06:34:23.450] [info]  Start polling Launcher updates.
+[2025-03-15 06:34:23.583] [info]  Running production web server.
+[2025-03-15 06:34:23.721] [info]  HTTP endpoints listening at http://localhost:33480
+[2025-03-15 06:34:23.722] [info]  HTTP endpoints listening at http://127.0.0.1:33480
+[2025-03-15 06:34:23.723] [error] Error happened during the update:  Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 06:34:23.738] [debug] Sharing: false
+[2025-03-15 06:34:23.800] [info]  Started the Navigator web server on 127.0.0.1:34080.
+[2025-03-15 06:34:28.323] [info]  Registered omniverse-launcher for Windows.
+[2025-03-15 06:34:28.324] [info]  Registered omniverse for Windows.
+[2025-03-15 06:34:28.412] [info]  Initialized.
+[2025-03-15 06:35:23.749] [error] Error happened during the update:  Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 06:36:23.763] [error] Error happened during the update:  Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 06:37:23.774] [error] Error happened during the update:  Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 06:38:23.801] [error] Error happened during the update:  Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 06:39:23.812] [error] Error happened during the update:  Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 09:03:04.789] [info]  Omniverse Launcher 1.9.16 (production)
+[2025-03-15 09:03:04.815] [info]  Argv: C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\NVIDIA Omniverse Launcher.exe --hidden
+[2025-03-15 09:03:04.816] [info]  Crash dumps directory: C:\Users\ben10\AppData\Roaming\omniverse-launcher\Crashpad
+[2025-03-15 09:03:04.833] [info]  Start polling Launcher updates.
+[2025-03-15 09:03:05.176] [debug] Reset current installer.
+[2025-03-15 09:03:05.208] [info]  Running production web server.
+[2025-03-15 09:03:05.261] [info]  HTTP endpoints listening at http://localhost:33480
+[2025-03-15 09:03:05.262] [info]  HTTP endpoints listening at http://127.0.0.1:33480
+[2025-03-15 09:03:05.288] [debug] Sharing: false
+[2025-03-15 09:03:05.397] [info]  Started the Navigator web server on 127.0.0.1:34080.
+[2025-03-15 09:03:06.803] [info]  Registered omniverse-launcher for Windows.
+[2025-03-15 09:03:06.804] [info]  Registered omniverse for Windows.
+[2025-03-15 09:03:06.845] [info]  Initialized.
+[2025-03-15 09:03:07.096] [error] Error happened during the update:  Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 09:04:19.133] [error] Error happened during the update:  Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 09:05:31.223] [error] Error happened during the update:  Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 09:06:43.290] [error] Error happened during the update:  Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 09:07:49.325] [error] Error happened during the update:  Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 09:08:49.334] [error] Error happened during the update:  Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 14:26:06.330] [info]  Omniverse Launcher 1.9.16 (production)
+[2025-03-15 14:26:06.377] [info]  Argv: C:\Users\ben10\AppData\Local\Programs\omniverse-launcher\NVIDIA Omniverse Launcher.exe --hidden
+[2025-03-15 14:26:06.378] [info]  Crash dumps directory: C:\Users\ben10\AppData\Roaming\omniverse-launcher\Crashpad
+[2025-03-15 14:26:06.412] [info]  Start polling Launcher updates.
+[2025-03-15 14:26:07.099] [debug] Reset current installer.
+[2025-03-15 14:26:07.150] [info]  Running production web server.
+[2025-03-15 14:26:07.216] [info]  HTTP endpoints listening at http://localhost:33480
+[2025-03-15 14:26:07.217] [info]  HTTP endpoints listening at http://127.0.0.1:33480
+[2025-03-15 14:26:07.236] [debug] Sharing: false
+[2025-03-15 14:26:07.538] [info]  Started the Navigator web server on 127.0.0.1:34080.
+[2025-03-15 14:26:08.917] [error] Error happened during the update:  Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 14:26:11.816] [info]  Registered omniverse-launcher for Windows.
+[2025-03-15 14:26:11.818] [info]  Registered omniverse for Windows.
+[2025-03-15 14:26:11.903] [info]  Initialized.
+[2025-03-15 14:27:08.927] [error] Error happened during the update:  Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 14:28:08.946] [error] Error happened during the update:  Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 14:29:08.966] [error] Error happened during the update:  Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 16:24:05.614] [error] Error happened during the update:  Error: net::ERR_CONNECTION_RESET
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 16:25:48.616] [error] Error happened during the update:  Error: net::ERR_CONNECTION_RESET
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 16:27:42.350] [error] Error happened during the update:  Error: net::ERR_CONNECTION_RESET
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 16:29:23.389] [error] Error happened during the update:  Error: net::ERR_CONNECTION_RESET
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 16:31:05.044] [error] Error happened during the update:  Error: net::ERR_CONNECTION_RESET
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)
+[2025-03-15 16:32:45.547] [error] Error happened during the update:  Error: net::ERR_CONNECTION_RESET
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:117806)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)

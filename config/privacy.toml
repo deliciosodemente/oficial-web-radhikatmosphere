@@ -1,0 +1,15 @@
+[privacy]
+performance = true
+personalization = true
+usage = true
+userId = "2q9WLf15qmnfCgaFc2RwJYh_GssUCVORyVNPDw8HOpA"
+idpId = "PDiAhv2kJTFeQ7WOPqiQ2tRZ7lGhR2X11dXvM4TZSxg"
+idpName = "NVIDIA-J"
+extraDiagnosticDataOptIn = ""
+email = "axelpadilla98@gmail.com"
+
+  [privacy.eula]
+  version = "4.1"
+
+  [privacy.gdpr]
+  version = "1.1"
