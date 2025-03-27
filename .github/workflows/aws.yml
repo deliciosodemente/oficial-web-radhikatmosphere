@@ -116,7 +116,6 @@ jobs:
 
     - name: Publish to Amplify
       run: amplify publish --yes
-        wait-for-service-stability: true
 
     - name: CodeGuru Reviewer
       uses: a            - name: Cache
