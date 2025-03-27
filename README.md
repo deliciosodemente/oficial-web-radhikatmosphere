@@ -8,8 +8,6 @@ Plataforma integral que combina Unity, DaVinci Resolve, NVIDIA NGC/NIM y Hosting
 - **Backend Orquestador**: FastAPI para centralizar llamadas a servicios
 - **Integración con DaVinci Resolve**: Automatización de edición de video
 - **NVIDIA NGC/NIM**: Inferencia de modelos AI con aceleración GPU
-- **Integración con Hostinger**: Gestión de hosting y optimización de costes
-
 ## Requisitos del Sistema
 
 - Python 3.9+
