@@ -1,0 +1,25 @@
+version: 1.0
+# Name of your App Runner service
+ServiceName: PlatformaIntegralOmniverseAppRunner
+
+SourceConfiguration:
+  ImageRepository:
+    # Replace with your ECR image URI
+    ImageIdentifier: "123456789012.dkr.ecr.us-east-1.amazonaws.com/my-ecr-repo:latest"
+    ImageRepositoryType: ECR
+  AutoDeploymentsEnabled: true
+
+InstanceConfiguration:
+  Cpu: "1024"        # 1 vCPU
+  Memory: "2048"     # 2 GB RAM
+
+# Optional: Health Check settings
+# HealthCheckConfiguration:
+#   Protocol: HTTP
+#   Path: /
+#   Interval: 5
+#   Timeout: 2
+#   HealthyThreshold: 2
+#   UnhealthyThreshold: 5
+
+# Optional: Add more configuration settings as needed
