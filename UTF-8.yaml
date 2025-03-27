@@ -10,8 +10,8 @@ SourceConfiguration:
   AutoDeploymentsEnabled: true
 
 InstanceConfiguration:
-  Cpu: "1024"        # 1 vCPU
-  Memory: "2048"     # 2 GB RAM
+  Cpu: "1024"        # 4 vCPU
+  Memory: "2048"     # 10 GB RAM
 
 # Optional: Health Check settings
 # HealthCheckConfiguration:
