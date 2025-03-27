@@ -91,6 +91,36 @@ jobs:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: ${{ env.ECS_SERVICE }}
         cluster: ${{ env.ECS_CLUSTER }}
+        name: Deploy to Amazon Amplify
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+    - name: Install Amplify CLI
+      run: npm install -g @aws-amplify/cli
+
+    - name: Initialize Amplify
+      run: amplify init --yes
+
+    - name: Publish to Amplify
+      run: amplify publish --yes
         wait-for-service-stability: true
         - name: CodeGuru Reviewer
   uses: aws-actions/codeguru-reviewer@v1.1
