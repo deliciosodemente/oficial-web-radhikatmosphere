@@ -1,0 +1,21 @@
+schemaVersion: 2.0.0
+metadata:
+  name: omniverse-integrated-platform
+components:
+  - name: dev
+    container:
+      image: public.ecr.aws/aws-mde/universal-image:latest
+      memoryLimit: 4Gi
+commands:
+  - id: install
+    exec:
+      component: dev
+      commandLine: "npm install && pip install -r backend/requirements.txt"
+  - id: build
+    exec:
+      component: dev
+      commandLine: "npm run build:frontend"
+  - id: test
+    exec:
+      component: dev
+      commandLine: "npm run test"

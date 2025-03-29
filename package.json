@@ -9,7 +9,11 @@
     "build:unity": "cd frontend/UnityProject && unity-cli build WebGL",
     "build:frontend": "webpack --mode production",
     "deploy": "docker-compose up -d",
-    "test": "pytest backend/tests"
+    "test": "pytest backend/tests",
+    "sync:s3": "node scripts/sync-s3.js",
+    "sync:s3:download": "node scripts/sync-s3.js build download",
+    "sync:s3:upload": "node scripts/sync-s3.js build upload",
+    "sync:s3:bidirectional": "node scripts/sync-s3.js build bidirectional"
   },
   "dependencies": {
     "@nvidia/omniverse-kit": "latest",
@@ -27,7 +31,9 @@
     "docker-compose": "^1.29.2",
     "@google-cloud/monitoring": "^2.3.5",
     "@azure/ai-text-analytics": "^5.1.0",
-    "@google/generative-ai": "^0.1.0"
+    "@google/generative-ai": "^0.1.0",
+    "aws-sdk": "^2.1430.0",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
@@ -43,4 +49,4 @@
     "nodemon": "^2.0.15",
     "typescript": "^4.5.4"
   }
-} 
+}

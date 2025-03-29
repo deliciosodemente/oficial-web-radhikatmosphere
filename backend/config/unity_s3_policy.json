@@ -1,0 +1,50 @@
+{
+    
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "UnityWebGLDeployment",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "unity.amazonaws.com"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:ListBucket",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::radhikatmosphere-frontend-production",
+                "arn:aws:s3:::radhikatmosphere-frontend-production/unity/*"
+            ]
+        },
+        {
+            "Sid": "UnityCloudFrontInvalidation",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "unity.amazonaws.com"
+            },
+            "Action": [
+                "cloudfront:CreateInvalidation"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "UnityAssetAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "unity.amazonaws.com"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::radhikatmosphere--use1-az6--x-s3",
+                "arn:aws:s3:::radhikatmosphere--use1-az6--x-s3/unity-assets/*"
+            ]
+        }
+    ]
+}

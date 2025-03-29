@@ -1,9 +1,17 @@
 import os
-from typing import Dict, Any
+import time
+from typing import Dict, Any, List, Optional
 import requests
 import json
 import torch
+import logging
+from tqdm import tqdm
+from pathlib import Path
 from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger('nvidia_ngc_service')
 
 class NvidiaService:
     def __init__(self):
@@ -135,4 +143,4 @@ class NvidiaService:
             }
             
         except Exception as e:
-            raise Exception(f"Error al monitorear GPU: {str(e)}") 
+            raise Exception(f"Error al monitorear GPU: {str(e)}")

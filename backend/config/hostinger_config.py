@@ -16,10 +16,11 @@ class HostingerConfig:
         """Verifica la conexión con Hostinger"""
         try:
             ssh = paramiko.SSHClient()
-            ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            ssh.set_missing_host_key_policy(paramiko.RejectPolicy())
             ssh.connect(
                 self.ssh_host,
                 port=self.ssh_port,
+
                 username=self.ssh_username,
                 key_filename=self.ssh_key_path
             )

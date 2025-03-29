@@ -1,91 +1,63 @@
 #!/bin/bash
 
-# Colores para mensajes
-GREEN='\033[0;32m'
-RED='\033[0;31m'
-NC='\033[0m'
+# Exit on error
+set -e
 
-echo -e "${GREEN}Iniciando proceso de despliegue...${NC}"
+# Load environment variables
+if [ -f .env ]; then
+    source .env
+fi
 
-# Verificar variables de entorno
-if [ -z "$HOSTINGER_API_KEY" ] || [ -z "$HOSTINGER_SSH_HOST" ] || [ -z "$HOSTINGER_SSH_USERNAME" ]; then
-    echo -e "${RED}Error: Faltan variables de entorno necesarias${NC}"
+# Check required environment variables
+if [ -z "$AWS_PROFILE" ] || [ -z "$AWS_REGION" ] || [ -z "$STACK_NAME" ]; then
+    echo "Please set AWS_PROFILE, AWS_REGION and STACK_NAME environment variables"
     exit 1
 fi
 
-# 1. Construir el frontend de Unity
-echo -e "${GREEN}Construyendo frontend de Unity...${NC}"
-cd frontend/UnityProject
-unity -batchmode -quit -projectPath . -buildWebGLPlayer ../build/WebGL
-if [ $? -ne 0 ]; then
-    echo -e "${RED}Error al construir el frontend de Unity${NC}"
-    exit 1
-fi
+# Build frontend
+echo "Building frontend..."
+npm install
+npm run build
 
-# 2. Construir el backend
-echo -e "${GREEN}Construyendo backend...${NC}"
-cd ../../backend
-python3 -m pip install -r requirements.txt
-if [ $? -ne 0 ]; then
-    echo -e "${RED}Error al instalar dependencias del backend${NC}"
-    exit 1
-fi
+# Deploy CloudFormation stack
+echo "Deploying infrastructure..."
+aws cloudformation deploy \
+    --template-file infrastructure/cloudformation.yaml \
+    --stack-name $STACK_NAME \
+    --parameter-overrides \
+        Environment=production \
+    --capabilities CAPABILITY_IAM \
+    --region $AWS_REGION \
+    --profile $AWS_PROFILE
 
-# 3. Ejecutar pruebas
-echo -e "${GREEN}Ejecutando pruebas...${NC}"
-python3 -m pytest tests/
-if [ $? -ne 0 ]; then
-    echo -e "${RED}Error en las pruebas${NC}"
-    exit 1
-fi
+# Get S3 bucket name and CloudFront distribution ID
+BUCKET_NAME=$(aws cloudformation describe-stacks \
+    --stack-name $STACK_NAME \
+    --query 'Stacks[0].Outputs[?OutputKey==`FrontendBucketName`].OutputValue' \
+    --output text \
+    --region $AWS_REGION \
+    --profile $AWS_PROFILE)
 
-# 4. Desplegar a Hostinger
-echo -e "${GREEN}Desplegando a Hostinger...${NC}"
-python3 -c "
-from services.hostinger_service import HostingerService
-import asyncio
+CLOUDFRONT_ID=$(aws cloudformation describe-stacks \
+    --stack-name $STACK_NAME \
+    --query 'Stacks[0].Outputs[?OutputKey==`CloudFrontDistributionId`].OutputValue' \
+    --output text \
+    --region $AWS_REGION \
+    --profile $AWS_PROFILE)
 
-async def deploy():
-    hostinger = HostingerService()
-    
-    # Desplegar frontend
-    frontend_result = await hostinger.deploy_frontend('../frontend/build/WebGL')
-    print('Frontend:', frontend_result)
-    
-    # Desplegar backend
-    backend_result = await hostinger.deploy_backend('.')
-    print('Backend:', backend_result)
-    
-    # Configurar SSL
-    ssl_result = await hostinger.configure_ssl()
-    print('SSL:', ssl_result)
-    
-    # Obtener estadísticas
-    stats = await hostinger.get_hosting_stats()
-    print('Estadísticas:', stats)
+# Upload frontend to S3
+echo "Uploading frontend to S3..."
+aws s3 sync build/ s3://$BUCKET_NAME/ \
+    --delete \
+    --region $AWS_REGION \
+    --profile $AWS_PROFILE
 
-asyncio.run(deploy())
-"
+# Invalidate CloudFront cache
+echo "Invalidating CloudFront cache..."
+aws cloudfront create-invalidation \
+    --distribution-id $CLOUDFRONT_ID \
+    --paths "/*" \
+    --region $AWS_REGION \
+    --profile $AWS_PROFILE
 
-if [ $? -ne 0 ]; then
-    echo -e "${RED}Error en el despliegue a Hostinger${NC}"
-    exit 1
-fi
-
-# 5. Verificar despliegue
-echo -e "${GREEN}Verificando despliegue...${NC}"
-curl -s https://radhikatmosphere.com/api/health > /dev/null
-if [ $? -ne 0 ]; then
-    echo -e "${RED}Error: El backend no está respondiendo${NC}"
-    exit 1
-fi
-
-curl -s https://radhikatmosphere.com/unity > /dev/null
-if [ $? -ne 0 ]; then
-    echo -e "${RED}Error: El frontend no está accesible${NC}"
-    exit 1
-fi
-
-echo -e "${GREEN}Despliegue completado exitosamente!${NC}"
-echo -e "Frontend: https://radhikatmosphere.com/unity"
-echo -e "Backend: https://radhikatmosphere.com/api" 
+echo "Deployment completed successfully!"

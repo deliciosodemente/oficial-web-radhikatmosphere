@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  # Nginx web server
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./infrastructure/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./infrastructure/nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./public:/var/www/radhikatmosphere:ro
+      - ./certbot/www:/var/www/certbot:ro
+      - ./certbot/conf:/etc/letsencrypt:ro
+    depends_on:
+      - backend
+      - omniverse-service
+      - agent-service
+    restart: always
+    networks:
+      - web
+
+  # Certbot for SSL certificates
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/www:/var/www/certbot:rw
+      - ./certbot/conf:/etc/letsencrypt:rw
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    networks:
+      - web
+
+  # Backend service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION}
+    volumes:
+      - ./backend:/app
+    restart: always
+    networks:
+      - web
+
+  # Omniverse GPU service
+  omniverse-service:
+    build:
+      context: ./omniverse
+      dockerfile: Dockerfile
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION}
+      - KEYSTORE_PASSWORD=${KEYSTORE_PASSWORD}
+      - KEY_PASSWORD=${KEY_PASSWORD}
+    volumes:
+      - ./omniverse:/app
+      - ./credentials/google-play:/app/credentials/google-play:ro
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    networks:
+      - web
+
+  # Agent service
+  agent-service:
+    build:
+      context: ./agent
+      dockerfile: Dockerfile
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION}
+      - KEYSTORE_PASSWORD=${KEYSTORE_PASSWORD}
+      - KEY_PASSWORD=${KEY_PASSWORD}
+    volumes:
+      - ./agent:/app
+      - ./credentials/google-play:/app/credentials/google-play:ro
+    restart: always
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge

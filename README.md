@@ -2,12 +2,86 @@
 
 Plataforma integral que combina Unity, DaVinci Resolve, NVIDIA NGC/NIM y Hostinger para crear experiencias interactivas y contenido multimedia avanzado.
 
+## Integración con S3 Bucket de NVIDIA Omniverse
+
+Este proyecto incluye integración con el bucket S3 de NVIDIA Omniverse ubicado en:
+`s3://radhikatmosphere--use1-az6--x-s3/.nvidia-omniverse/`
+
+### Configuración de S3
+
+Para configurar la integración con S3, sigue estos pasos:
+
+1. Asegúrate de tener las credenciales de AWS configuradas en el archivo `.env`:
+
+```
+AWS_ACCESS_KEY_ID=tu_access_key_id
+AWS_SECRET_ACCESS_KEY=tu_secret_access_key
+AWS_REGION=us-east-1
+```
+
+2. Instala las dependencias del proyecto:
+
+```bash
+npm install
+```
+
+### Sincronización con S3
+
+El proyecto incluye varios comandos para sincronizar archivos con el bucket S3:
+
+- **Sincronización bidireccional**:
+  ```bash
+  npm run sync:s3:bidirectional
+  ```
+
+- **Subir archivos a S3**:
+  ```bash
+  npm run sync:s3:upload
+  ```
+
+- **Descargar archivos de S3**:
+  ```bash
+  npm run sync:s3:download
+  ```
+
+- **Sincronización personalizada**:
+  ```bash
+  node scripts/sync-s3.js [directorio_local] [modo_sincronización]
+  ```
+  Donde `modo_sincronización` puede ser: `upload`, `download` o `bidirectional`.
+
+### API REST para S3
+
+El servidor incluye endpoints para interactuar con el bucket S3:
+
+- **Listar archivos**:
+  ```
+  GET /api/s3/list
+  ```
+
+- **Descargar archivo**:
+  ```
+  GET /api/s3/download/:ruta_archivo
+  ```
+
+- **Subir archivo**:
+  ```
+  POST /api/s3/upload?key=ruta_archivo
+  ```
+
+- **Sincronizar directorio**:
+  ```
+  POST /api/s3/sync
+  ```
+  Con body: `{ "localDir": "directorio_local", "s3Prefix": "prefijo_s3" }`
+
 ## Características Principales
 
 - **Frontend Interactivo**: Desarrollado en Unity (WebGL) para experiencias inmersivas
 - **Backend Orquestador**: FastAPI para centralizar llamadas a servicios
 - **Integración con DaVinci Resolve**: Automatización de edición de video
 - **NVIDIA NGC/NIM**: Inferencia de modelos AI con aceleración GPU
+
 ## Requisitos del Sistema
 
 - Python 3.9+
@@ -28,10 +102,13 @@ Plataforma integral que combina Unity, DaVinci Resolve, NVIDIA NGC/NIM y Hosting
     
   /backend
     ├── main.py              # Servidor FastAPI
+    ├── /routes             # Rutas de la API
+    │      └── pdf_to_podcast.py
     ├── /services           # Servicios de integración
     │      ├── davinci_service.py
     │      ├── unity_service.py
     │      ├── nvidia_ngc_service.py
+    │      ├── nim_service.py
     │      ├── gemini_service.py
     │      └── hostinger_service.py
     ├── /config
@@ -118,4 +195,4 @@ kubectl apply -f infrastructure/kubernetes/
 
 ## Licencia
 
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles. 
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
