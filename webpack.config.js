@@ -4,10 +4,18 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].[contenthash].js',
+    publicPath: '/',
   },
   module: {
     rules: [
+      {
+        test: /.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[hash][ext][query]'
+        }
+      },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
@@ -35,4 +43,4 @@ module.exports = {
     port: 3000,
     hot: true
   }
-}; 
+};

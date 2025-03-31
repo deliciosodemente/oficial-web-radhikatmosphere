@@ -8,7 +8,7 @@ from services.davinci_service import DaVinciService
 from services.unity_service import UnityService
 from services.nvidia_ngc_service import NvidiaService
 from services.gemini_service import GeminiService
-from services.hostinger_service import HostingerService
+from services.hostinger_service import HostingerService  // Eliminar esta línea
 
 # Cargar variables de entorno
 load_dotenv()
@@ -33,7 +33,7 @@ davinci_service = DaVinciService()
 unity_service = UnityService()
 nvidia_service = NvidiaService()
 gemini_service = GeminiService()
-hostinger_service = HostingerService()
+hostinger_service = HostingerService()  // Eliminar esta línea
 
 @app.get("/")
 async def root():
@@ -74,10 +74,10 @@ async def generate_text(prompt: str):
 @app.get("/hosting/status")
 async def get_hosting_status():
     try:
-        result = await hostinger_service.get_status()
+        result = await hostinger_service.get_status()  // Eliminar esta línea
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True) 
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

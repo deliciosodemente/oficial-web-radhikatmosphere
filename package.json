@@ -1,7 +1,7 @@
 {
   "name": "omniverse-integrated-platform",
   "version": "1.0.0",
-  "description": "Plataforma integral con Unity, DaVinci Resolve, NVIDIA NGC/NIM y Hostinger",
+  "description": "Plataforma integral con Unity, DaVinci Resolve y NVIDIA NGC/NIM",
   "main": "backend/main.py",
   "scripts": {
     "start": "python backend/main.py",
@@ -13,7 +13,10 @@
     "sync:s3": "node scripts/sync-s3.js",
     "sync:s3:download": "node scripts/sync-s3.js build download",
     "sync:s3:upload": "node scripts/sync-s3.js build upload",
-    "sync:s3:bidirectional": "node scripts/sync-s3.js build bidirectional"
+    "sync:s3:bidirectional": "node scripts/sync-s3.js build bidirectional",
+    "amplify:init": "amplify init",
+    "amplify:push": "amplify push",
+    "amplify:publish": "amplify publish"
   },
   "dependencies": {
     "@nvidia/omniverse-kit": "latest",

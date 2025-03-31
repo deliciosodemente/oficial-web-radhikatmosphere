@@ -1,0 +1,20 @@
+{
+  "frontend": {
+    "build": {
+      "command": "npm run build",
+      "directory": "dist"
+    }
+  },
+  "hosting": {
+    "amplify": {
+      "type": "static",
+      "customHeaders": [],
+      "cacheControl": [
+        {
+          "pattern": "**/*",
+          "ttl": 86400
+        }
+      ]
+    }
+  }
+}

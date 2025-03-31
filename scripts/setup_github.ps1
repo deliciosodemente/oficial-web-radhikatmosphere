@@ -74,10 +74,9 @@ if (Test-Path $workflowFile) {
 
 # Mostrar información de secretos requeridos
 Write-Cyan "`nPara completar la configuración, necesitarás añadir los siguientes secretos en GitHub:"
-Write-Host "1. HOSTINGER_SERVER: 82.29.157.155"
-Write-Host "2. HOSTINGER_USERNAME: u547715306"
-Write-Host "3. HOSTINGER_PASSWORD: (tu contraseña de Hostinger)"
-Write-Host "4. HOSTINGER_PORT: 65002"
+Write-Host "1. AWS_ACCESS_KEY_ID: AKIAXXXXXXXXXXXXXXXX"
+Write-Host "2. AWS_SECRET_ACCESS_KEY: (tu clave secreta de AWS)"
+Write-Host "3. AWS_DEFAULT_REGION: us-east-1"
 
 Write-Host "`nPara añadir estos secretos:"
 Write-Host "1. Ve a tu repositorio en GitHub"
@@ -100,7 +99,7 @@ switch ($opcion) {
     "2" {
         $commitMessage = Read-Host "Introduce un mensaje para el commit"
         if (-not $commitMessage) {
-            $commitMessage = "Configuración inicial para despliegue automático a Hostinger"
+            $commitMessage = "Configuración inicial para despliegue automático en AWS"
         }
         
         git add .
@@ -118,4 +117,4 @@ switch ($opcion) {
 }
 
 Write-Host "`nPresiona cualquier tecla para salir..."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown") 
+$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")

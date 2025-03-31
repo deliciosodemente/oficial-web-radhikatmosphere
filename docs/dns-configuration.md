@@ -4,7 +4,7 @@ This guide provides instructions for configuring DNS settings for the radhikatmo
 
 ## Domain Registration
 
-If you haven't already registered the domain, you can do so through a domain registrar like Namecheap, GoDaddy, or directly through Hostinger if you're using their hosting services.
+If you haven't already registered the domain, you can do so through a domain registrar like Namecheap, GoDaddy, or directly through AWS Route 53 if you're using their hosting services.
 
 ## DNS Records Configuration
 
@@ -81,4 +81,4 @@ If you encounter issues with your DNS configuration:
 
 - [DNS Basics](https://www.cloudflare.com/learning/dns/what-is-dns/)
 - [Let's Encrypt Documentation](https://letsencrypt.org/docs/)
-- [Hostinger DNS Management Guide](https://support.hostinger.com/en/articles/1583227-how-to-manage-dns-records)
+- [AWS Route 53 Documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html)

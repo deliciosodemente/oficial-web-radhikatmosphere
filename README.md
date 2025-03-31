@@ -1,6 +1,6 @@
 # Plataforma Integral Omniverse
 
-Plataforma integral que combina Unity, DaVinci Resolve, NVIDIA NGC/NIM y Hostinger para crear experiencias interactivas y contenido multimedia avanzado.
+Plataforma integral que combina Unity, DaVinci Resolve y NVIDIA NGC/NIM para crear experiencias interactivas y contenido multimedia avanzado.
 
 ## Integración con S3 Bucket de NVIDIA Omniverse
 
