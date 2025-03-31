@@ -59,7 +59,7 @@ class NvidiaService:
             }
             
         except Exception as e:
-            raise Exception(f"Error en inferencia: {str(e)}")
+            raise RuntimeError(f"Error en inferencia: {str(e)}")
             
     async def download_model(self, model_id: str, target_path: str) -> None:
         """
@@ -94,7 +94,7 @@ class NvidiaService:
                     f.write(chunk)
                     
         except Exception as e:
-            raise Exception(f"Error al descargar modelo: {str(e)}")
+            raise RuntimeError(f"Error al descargar modelo: {str(e)}")
             
     async def get_model_info(self, model_id: str) -> Dict[str, Any]:
         """
@@ -121,7 +121,7 @@ class NvidiaService:
             return response.json()
             
         except Exception as e:
-            raise Exception(f"Error al obtener información del modelo: {str(e)}")
+            raise RuntimeError(f"Error al obtener información del modelo: {str(e)}")
             
     async def monitor_gpu_usage(self) -> Dict[str, Any]:
         """
@@ -143,4 +143,3 @@ class NvidiaService:
             }
             
         except Exception as e:
-            raise Exception(f"Error al monitorear GPU: {str(e)}")

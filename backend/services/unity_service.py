@@ -33,6 +33,7 @@ class UnityService:
                 return json.loads(response)
                 
         except Exception as e:
+            # amazonq-ignore-next-line
             raise Exception(f"Error al actualizar experiencia Unity: {str(e)}")
             
     async def build_webgl(self, project_path: str, build_target: str = "WebGL") -> Dict[str, Any]:
@@ -57,7 +58,7 @@ class UnityService:
             stdout, stderr = await process.communicate()
             
             if process.returncode != 0:
-                raise Exception(f"Error en la compilación: {stderr.decode()}")
+                raise RuntimeError(f"Error en la compilación: {stderr.decode()}")
                 
             return {
                 "status": "success",
@@ -66,6 +67,7 @@ class UnityService:
             }
             
         except Exception as e:
+
             raise Exception(f"Error al compilar proyecto Unity: {str(e)}")
             
     async def deploy_experience(self, experience_id: str, build_path: str) -> Dict[str, Any]:

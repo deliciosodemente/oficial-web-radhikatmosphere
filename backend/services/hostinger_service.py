@@ -177,10 +177,11 @@ class HostingerService:
             for cmd in commands:
                 stdin, stdout, stderr = ssh.exec_command(cmd)
                 if stderr.channel.recv_exit_status() != 0:
-                    raise Exception(f"Error ejecutando comando: {cmd}")
+                    raise RuntimeError(f"Error ejecutando comando: {cmd}")
             
             return {
                 "status": "success",
+
                 "message": "SSL configurado exitosamente"
             }
         except Exception as e:

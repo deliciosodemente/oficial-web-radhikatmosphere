@@ -18,7 +18,7 @@ AWS.config.update({
 
 // Inicializar cliente S3
 const s3 = new AWS.S3();
-const S3_BUCKET = 'radhikatmosphere--use1-az6--x-s3';
+const S3_BUCKET = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const S3_PREFIX = '.nvidia-omniverse/';
 
 /**
@@ -26,12 +26,13 @@ const S3_PREFIX = '.nvidia-omniverse/';
  */
 async function testConnection() {
   console.log('Configuración actual:');
-  console.log(`- AWS_ACCESS_KEY_ID: ${process.env.AWS_ACCESS_KEY_ID.substring(0, 5)}...`);
-  console.log(`- AWS_SECRET_ACCESS_KEY: ${process.env.AWS_SECRET_ACCESS_KEY.substring(0, 5)}...`);
+  console.log(`- AWS_ACCESS_KEY_ID: ${'*'.repeat(process.env.AWS_ACCESS_KEY_ID.length)}`);
+  console.log(`- AWS_SECRET_ACCESS_KEY: ${'*'.repeat(process.env.AWS_SECRET_ACCESS_KEY.length)}`);
   console.log(`- AWS_REGION: ${process.env.AWS_REGION}`);
   console.log(`- S3_BUCKET: ${S3_BUCKET}`);
   console.log('\nIntentando conectar a AWS S3...');
   
+
   try {
     // Intentar listar objetos en el bucket
     const params = {
