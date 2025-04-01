@@ -9,15 +9,35 @@ if [ -f .env ]; then
 fi
 
 # Check required environment variables
-if [ -z "$AWS_PROFILE" ] || [ -z "$AWS_REGION" ] || [ -z "$STACK_NAME" ]; then
-    echo "Please set AWS_PROFILE, AWS_REGION and STACK_NAME environment variables"
-    exit 1
-fi
+required_vars=("AWS_ACCESS_KEY_ID" "AWS_SECRET_ACCESS_KEY" "AWS_REGION" "LIGHTSAIL_IP" "LIGHTSAIL_SSH_USER")
+for var in "${required_vars[@]}"; do
+    if [ -z "${!var}" ]; then
+        echo "ERROR: La variable $var no está configurada en .env"
+        exit 1
+    fi
+done
 
 # Build frontend
-echo "Building frontend..."
+echo "Construyendo frontend..."
 npm install
 npm run build
+
+# Ejecutar script de despliegue en Lightsail
+echo "Iniciando despliegue en AWS Lightsail..."
+python3 scripts/deploy_lightsail.py
+
+# Start backend service with PM2
+echo "Iniciando servicio backend..."
+ssh -i "${LIGHTSAIL_SSH_KEY_PATH}" ${LIGHTSAIL_SSH_USER}@${LIGHTSAIL_IP} \
+  "pm2 start python3 backend/main.py --name 'backend-service' --interpreter python3 --log logs/backend.log"
+
+# Verify deployment status
+echo "Verificando estado del servicio..."
+ssh -i "${LIGHTSAIL_SSH_KEY_PATH}" ${LIGHTSAIL_SSH_USER}@${LIGHTSAIL_IP} "pm2 list"
+
+# Add Docker authentication
+chmod +x ./scripts/docker-login.sh
+./scripts/docker-login.sh
 
 # Deploy CloudFormation stack
 echo "Deploying infrastructure..."
@@ -60,4 +80,8 @@ aws cloudfront create-invalidation \
     --region $AWS_REGION \
     --profile $AWS_PROFILE
 
-echo "Deployment completed successfully!"
+# Recargar configuración de Nginx
+echo "Recargando Nginx..."
+sudo systemctl reload nginx
+
+echo "Deployment complete!"

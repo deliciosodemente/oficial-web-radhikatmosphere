@@ -5,7 +5,7 @@
             "Sid": "NvidiaModelAccess",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "*"
+                "AWS": "arn:aws:iam::123456789012:role/nvidia-omniverse-role"
             },
             "Action": [
                 "s3:GetObject",
