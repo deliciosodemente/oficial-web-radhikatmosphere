@@ -81,6 +81,8 @@ El servidor incluye endpoints para interactuar con el bucket S3:
 - **Backend Orquestador**: FastAPI para centralizar llamadas a servicios
 - **Integración con DaVinci Resolve**: Automatización de edición de video
 - **NVIDIA NGC/NIM**: Inferencia de modelos AI con aceleración GPU
+- **AWS Integration**: Despliegue automático en EC2, almacenamiento S3 y funciones Lambda
+- **NVIDIA Omniverse**: Renderizado distribuido y gestión de assets 3D
 
 ## Requisitos del Sistema
 
@@ -91,6 +93,9 @@ El servidor incluye endpoints para interactuar con el bucket S3:
 - Unity 2022.3+
 - Docker y Docker Compose
 - Kubernetes (opcional para despliegue)
+- AWS CLI configurado con permisos IAM
+- NVIDIA Cloud Gateway para NGC/NIM
+- Omniverse Cache Manager 2023.1+
 
 ## Estructura del Proyecto
 
