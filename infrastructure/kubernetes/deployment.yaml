@@ -30,21 +30,26 @@ spec:
         - containerPort: 8000
           name: http
         env:
+        - name: FIREBASE_PROJECT_ID
+          valueFrom:
+            secretKeyRef:
+              name: firebase-secrets
+              key: project-id
+        - name: FIREBASE_CLIENT_EMAIL
+          valueFrom:
+            secretKeyRef:
+              name: firebase-secrets
+              key: client-email
+        - name: FIREBASE_PRIVATE_KEY
+          valueFrom:
+            secretKeyRef:
+              name: firebase-secrets
+              key: private-key
         - name: NVIDIA_NGC_API_KEY
           valueFrom:
             secretKeyRef:
               name: nvidia-secrets
               key: ngc-api-key
-        - name: UNITY_API_KEY
-          valueFrom:
-            secretKeyRef:
-              name: unity-secrets
-              key: api-key
-        - name: DAVINCI_API_KEY
-          valueFrom:
-            secretKeyRef:
-              name: davinci-secrets
-              key: api-key
         volumeMounts:
         - name: models-storage
           mountPath: /app/models
@@ -84,4 +89,4 @@ spec:
   resources:
     requests:
       storage: 100Gi
-  storageClassName: standard 
+  storageClassName: standard

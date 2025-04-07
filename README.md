@@ -14,8 +14,8 @@ Para configurar la integración con S3, sigue estos pasos:
 1. Asegúrate de tener las credenciales de AWS configuradas en el archivo `.env`:
 
 ```
-AWS_ACCESS_KEY_ID=tu_access_key_id
-AWS_SECRET_ACCESS_KEY=tu_secret_access_key
+AWS_ACCESS_KEY_ID=TU_ACCESS_KEY_REAL_AQUI
+AWS_SECRET_ACCESS_KEY=TU_SECRET_KEY_REAL_AQUI
 AWS_REGION=us-east-1
 ```
 

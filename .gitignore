@@ -17,8 +17,21 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
+# Archivos sensibles
+.env
+*.csv
+*.key
+
+# Entornos virtuales y dependencias
+venv/
+node_modules/
+
 # Archivos de IDE
 .idea/
 .vscode/
+
+# Logs y databases
+*.log
+*.sqlite
 *.sublime-project
 *.sublime-workspace
